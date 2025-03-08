@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&family=Readex+Pro&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Zain", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #ecebf1;
+}
+
+
+/* إخفاء المحتوى الأول */
+#content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+.logo {
+    margin-right: 40px;
+    height: 25px; /* ارتفاع الصورة */
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+.nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: bold;
+}
+
+.menu-icon {
+    color: rgba(22, 22, 22, 0.527);
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    animation: move 2s ;
+}
+@keyframes move {
+   
+    50% {
+      transform: translateX(-100px);
+    }
+   
+  }
+@media (max-width: 834px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 40px; /* علشان نبعد القائمة عن الهدر */
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: right; /* علشان نركز النص في شاشة الهاتف */
+   height: 100vh;
+    }
+  
+    .nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+/* التعديل الجديد علشان الكلام يظهر في نص الشاشة */
+@media (min-width: 834px) {
+    .header {
+        justify-content: center; /* علشان نركز العناصر في المنتصف */
+    }
+    .nav {
+        margin-right: 20px; /* علشان نبعد القائمة عن اللوجو */
+    }
+}
+
+
+.header2 {
+    background-color: #b6b6b666;
+    backdrop-filter: blur(5px);
+    color: rgb(0, 0, 0);
+    padding: 7px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* لضمان ظهوره فوق المحتوى */
+    transition: margin-top 0.3s ease-in-out; /* تأثير ناعم عند تغيير المسافة */
+    .nav.active + .header2 {
+        margin-top: 100vh; /* يجعل الهيدر الثاني يظهر بعد القائمة */
+    }
+    
+}
+
+.header2-nav button {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #1f53ff;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.header2-nav a {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Social {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+@media (max-width: 834px) {
+    .header2-nav button {
+        font-size: 12px;
+        padding: 5px 12px;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .header2-nav a {
+        font-size: 15px;
+    }
+
+    .Social {
+        font-size: 16px;
+    }
+}
+
+a{
+  color: #1f53ff;
+}
+p {
+    margin-top: 1%;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.header + p {
+  margin-top: 40px; /* Adjust this value as needed */
+}
+
+@media (max-width: 800px) {
+  p {
+      margin: 20px;
+      margin-top: 5%;
+      font-size: 14px;
+  }
+}
+
+
+.contenar1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+
+    background-color: #ffffffee;
+}
+.contenar1 h1 {
+    background: linear-gradient(to right, #007dc5, #ff0000); /* تدرج لوني */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    margin-top: 20px;  
+    margin-bottom: 10px;
+    text-align: center;
+    opacity: 0.3;
+    transform: translateY(20px);
+    animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.contenar1 p {
+    font-size: 25px;
+    text-align: center;
+    color: #000000;
+}
+
+.contenar1 img {
+    width: 60%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    opacity: 0.3;
+    transform: scale(0.8);
+    transition: box-shadow 2s; /* تأثير ناعم عند تغيير الظل */
+    animation: fadeIn 2s forwards, scaleUp 2s 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.contenar1 button{
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #1f53ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.contenar1 h2 {
+    color: #000000;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+.contenar1 h3 {
+
+     background: linear-gradient(to right, #ff0000, #d49100); /* تدرج لوني */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+   margin-bottom: 100px;
+    text-align: center;
+    
+}
+@media (max-width: 834px) {
+    .contenar1 h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .contenar1 p {
+        font-size: 18px;
+    }
+    .contenar1 button {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+    .contenar1 h2 {
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .contenar1 h3 {
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+    .contenar1 img {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pp{
+    margin: 0;
+        text-align: right;
+        background-color: #ebebeb;
+        padding: 20px;
+        
+       
+      }
+      
+      .pp p{
+        margin: 10px;
+        width: 94%;
+        text-align: right;
+    
+        font-size: 14px;
+        color: #000000;
+      }
+  
+        .pp a{
+        color: #006eff;
+
+        }
+      
+      hr {
+        border: 0;
+        border-top: 2px solid #808080;  /* اللون والسُمك */
+        width: 97%;  /* عرض الخط */
+        margin: 20px auto;  /* المسافة من الأعلى والأسفل */
+      }
+      
+      @media (max-width: 834px){
+        .pp p{
+            font-size: 12px;
+        }
+      }

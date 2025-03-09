@@ -279,8 +279,7 @@ p {
 }
 @media (max-width: 834px) {
     .contenar1 h1 {
-        font-size: 30px;
-        margin-bottom: 5px;
+        font-size: 50px;
     }
     .contenar1 p {
         font-size: 18px;

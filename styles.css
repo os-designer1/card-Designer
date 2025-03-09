@@ -272,6 +272,7 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 25px;
+    margin-top: 20px;
    margin-bottom: 100px;
     text-align: center;
     
